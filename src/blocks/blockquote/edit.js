@@ -41,7 +41,7 @@ const {
 } = wp.components
 
 // Extend component
-const { Component, Fragment } = wp.element
+const { Component } = wp.element
 
 class UAGBBlockQuote extends Component {
 
