@@ -108,7 +108,7 @@ class UAGBMultiButtonEdit extends Component {
 			return times( button_block, n => [ "uagb/buttons-child", buttons[n] ] )
 		} )
 		return (
-			<Fragment>
+			<>
 				<InspectorControls>
 					<PanelBody title={ __( "General" ) } initialOpen={ true }>
 						<BaseControl>
@@ -182,7 +182,7 @@ class UAGBMultiButtonEdit extends Component {
 					</div>
 				</div>
 				{ loadBtnGoogleFonts }
-			</Fragment>
+			</>
 		)
 	}
 }
