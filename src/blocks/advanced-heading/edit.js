@@ -200,7 +200,7 @@ class UAGBAdvancedHeading extends Component {
 		}
 
 		return (
-			<Fragment>
+			<>
 				<BlockControls key='controls'>
 					<AlignmentToolbar
 						value={ headingAlign }
@@ -287,7 +287,7 @@ class UAGBAdvancedHeading extends Component {
 								{ value: "dotted", label: __( "Dotted" ) },
 							] }
 						/>
-						{ seperatorStyle !== "none" && <Fragment>
+						{ seperatorStyle !== "none" && <>
 							<RangeControl
 								label={ __( "Thickness (px)" ) }
 								value={ separatorHeight }
@@ -312,16 +312,16 @@ class UAGBAdvancedHeading extends Component {
 								allowReset
 								initialPosition={20}
 							/>
-							{ seperatorStyle !== "none" && <Fragment>
+							{ seperatorStyle !== "none" && <>
 								<p className="uagb-setting-label">{ __( "Separator Color" ) }<span className="components-base-control__label"><span className="component-color-indicator" style={{ backgroundColor: separatorColor }} ></span></span></p>
 								<ColorPalette
 									value={ separatorColor }
 									onChange={ ( colorValue ) => setAttributes( { separatorColor: colorValue } ) }
 									allowReset
 								/>
-							</Fragment>
+							</>
 							}
-						</Fragment>
+						</>
 						}
 					</PanelBody>
 					<PanelBody title={ __( "Spacing" ) } initialOpen={ false }>
@@ -392,7 +392,7 @@ class UAGBAdvancedHeading extends Component {
 				{ loadHeadingGoogleFonts }
 				{ loadSubHeadingGoogleFonts }
 
-			</Fragment>
+			</>
 		)
 	}
 }
