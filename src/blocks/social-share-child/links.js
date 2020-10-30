@@ -1,6 +1,8 @@
+
 const links = {
 	facebook: "https://www.facebook.com/sharer.php?u=",
 	twitter: "https://twitter.com/share?url=",
+	pinterest: "https://pinterest.com/pin/create/link/?url="+`${window.location.href}&media=`,
 	google: "https://plus.google.com/share?url=",
 	linkedin: "https://www.linkedin.com/shareArticle?url=",
 	digg: "http://digg.com/submit?url=",

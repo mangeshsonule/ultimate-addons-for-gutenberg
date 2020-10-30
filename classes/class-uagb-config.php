@@ -1922,6 +1922,7 @@ if ( ! class_exists( 'UAGB_Config' ) ) {
 							'image_icon'          => 'icon',
 							'icon'                => 'fab fa-facebook',
 							'image'               => '',
+							'pinterestImage'      => '',
 							'icon_color'          => '#3a3a3a',
 							'icon_hover_color'    => '',
 							'icon_bg_color'       => '',
