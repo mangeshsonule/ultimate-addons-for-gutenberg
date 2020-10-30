@@ -276,7 +276,7 @@ class UAGBBlockQuote extends Component {
 		]
 
 		const border_settings =(
-			<Fragment>
+			<>
 				<h2>{ __( "Modern Layout - Styling" ) }</h2>
 				<SelectControl
 					label={ __( "Quote Border Style" ) }
@@ -303,11 +303,11 @@ class UAGBBlockQuote extends Component {
 					allowReset
 				/>
 				 }
-			</Fragment>
+			</>
 		)
 
 		const quote_settings = (
-			<Fragment>
+			<>
 				<h2>{ __( "Quotation Layout - Styling" ) }</h2>
 				<TabPanel className="uagb-size-type-field-tabs" activeClass="active-tab"
 					tabs={ [
@@ -333,7 +333,7 @@ class UAGBBlockQuote extends Component {
 
 							if ( "mobile" === tab.name ) {
 								tabout = (
-									<Fragment>
+									<>
 										{quoteSizeTypeControls}
 										<RangeControl
 											label={ __( "Quote Icon Size" ) }
@@ -345,11 +345,11 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							} else if ( "tablet" === tab.name ) {
 								tabout = (
-									<Fragment>
+									<>
 										{quoteSizeTypeControls}
 										<RangeControl
 											label={ __( "Quote Icon Size" ) }
@@ -361,11 +361,11 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							} else {
 								tabout = (
-									<Fragment>
+									<>
 										{quoteSizeTypeControls}
 										<RangeControl
 											label={ __( "Quote Icon Size" ) }
@@ -377,7 +377,7 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							}
 
@@ -409,7 +409,7 @@ class UAGBBlockQuote extends Component {
 
 							if ( "mobile" === tab.name ) {
 								tabout = (
-									<Fragment>
+									<>
 										{quotePaddingControls}
 										<RangeControl
 											label={ __( "Background Size" ) }
@@ -421,11 +421,11 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							} else if ( "tablet" === tab.name ) {
 								tabout = (
-									<Fragment>
+									<>
 										{quotePaddingControls}
 										<RangeControl
 											label={ __( "Background Size" ) }
@@ -437,11 +437,11 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							} else {
 								tabout = (
-									<Fragment>
+									<>
 										{quotePaddingControls}
 										<RangeControl
 											label={ __( "Background Size" ) }
@@ -453,7 +453,7 @@ class UAGBBlockQuote extends Component {
 											allowReset
 											initialPosition={30}
 										/>
-									</Fragment>
+									</>
 								)
 							}
 
@@ -471,7 +471,7 @@ class UAGBBlockQuote extends Component {
 						allowReset
 					/>
 				}
-			</Fragment>
+			</>
 		)
 
 		const skin_settings =(
@@ -488,7 +488,7 @@ class UAGBBlockQuote extends Component {
 				<hr className="uagb-editor__separator" />
 				{ skinStyle === "border" && border_settings	}
 				{ skinStyle === "quotation" && quote_settings }
-				{ skinStyle === "quotation" && <Fragment><hr className="uagb-editor__separator" /><h2>{ __( "Quote Icon Colors" ) }</h2></Fragment> }
+				{ skinStyle === "quotation" && <><hr className="uagb-editor__separator" /><h2>{ __( "Quote Icon Colors" ) }</h2></> }
 				{ "none" != borderStyle &&
 					<TabPanel className="uagb-inspect-tabs uagb-inspect-tabs-col-2"
 						activeClass="active-tab"
@@ -534,7 +534,7 @@ class UAGBBlockQuote extends Component {
 
 		// Image controls.
 		const imageControls = (
-			<Fragment>
+			<>
 				<hr className="uagb-editor__separator" />
 				<BaseControl className="editor-bg-image-control" label={ __( "Author Image" ) } >
 					<MediaUpload
@@ -555,7 +555,7 @@ class UAGBBlockQuote extends Component {
 					}
 				</BaseControl>
 				{ ( authorImage && authorImage.url !=="null" && authorImage.url !== "" ) &&
-					<Fragment>
+					<>
 						<SelectControl
 							label={ __( "Author Image Position" ) }
 							value={ authorImgPosition }
@@ -590,24 +590,24 @@ class UAGBBlockQuote extends Component {
 							beforeIcon = ""
 							allowReset
 						/>
-					</Fragment>
+					</>
 				}
-			</Fragment>
+			</>
 		)
 
 		const colorSettings = (
-			<Fragment>
-				{ "none" != borderStyle && skinStyle == "border" && <Fragment>
+			<>
+				{ "none" != borderStyle && skinStyle == "border" && <>
 					<p className="uagb-setting-label">{ __( "Border Color" ) }<span className="components-base-control__label"><span className="component-color-indicator" style={{ backgroundColor: borderColor }} ></span></span></p>
 					<ColorPalette
 						value={ borderColor }
 						onChange={ ( colorValue ) => setAttributes( { borderColor: colorValue } ) }
 						allowReset
 					/>
-				</Fragment>
+				</>
 				}
 
-				{ skinStyle == "quotation" && <Fragment>
+				{ skinStyle == "quotation" && <>
 					<p className="uagb-setting-label">{ __( "Icon Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: quoteColor }} ></span></span></p>
@@ -624,14 +624,14 @@ class UAGBBlockQuote extends Component {
 						onChange={ ( colorValue ) => setAttributes( { quoteBgColor: colorValue } ) }
 						allowReset
 					/>
-				</Fragment>
+				</>
 				}
-			</Fragment>
+			</>
 		)
 
 		const hoverSettings = (
-			<Fragment>
-				{ skinStyle == "border" && <Fragment>
+			<>
+				{ skinStyle == "border" && <>
 					<p className="uagb-setting-label">{ __( "Border Hover Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: borderHoverColor }} ></span></span></p>
@@ -640,9 +640,9 @@ class UAGBBlockQuote extends Component {
 						onChange={ ( colorValue ) => setAttributes( { borderHoverColor: colorValue } ) }
 						allowReset
 					/>
-				</Fragment>
+				</>
 				}
-				{ skinStyle == "quotation" && <Fragment>
+				{ skinStyle == "quotation" && <>
 					<p className="uagb-setting-label">{ __( "Hover Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: quoteHoverColor }} ></span></span></p>
@@ -659,13 +659,13 @@ class UAGBBlockQuote extends Component {
 						onChange={ ( colorValue ) => setAttributes( { quoteBgHoverColor: colorValue } ) }
 						allowReset
 					/>
-				</Fragment>
+				</>
 				}
-			</Fragment>
+			</>
 		)
 
 		const Typography =(
-			<Fragment>
+			<>
 				<PanelBody title={ __( "Content" ) } initialOpen={ false }>
 					<h2>{ __( "Quote" ) }</h2>
 					<TypographyControl
@@ -724,12 +724,12 @@ class UAGBBlockQuote extends Component {
 					{ imageControls }
 
 				</PanelBody>
-			</Fragment>
+			</>
 		)
 
 		const tweet_normal = (
-			<Fragment>
-				{ iconSkin == "link" && <Fragment>
+			<>
+				{ iconSkin == "link" && <>
 					<p className="uagb-setting-label">{ __( "Tweet Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: tweetLinkColor }} ></span></span></p>
@@ -738,9 +738,9 @@ class UAGBBlockQuote extends Component {
 					        onChange={ ( colorValue ) => setAttributes( { tweetLinkColor: colorValue } ) }
 					        allowReset
 					    />
-					  </Fragment>
+					  </>
 				}
-				{ ( iconSkin !== "link" ) && <Fragment>
+				{ ( iconSkin !== "link" ) && <>
 					<p className="uagb-setting-label">{ __( "Tweet Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: tweetBtnColor }} ></span></span></p>
@@ -758,14 +758,14 @@ class UAGBBlockQuote extends Component {
 					        onChange={ ( colorValue ) => setAttributes( { tweetBtnBgColor: colorValue } ) }
 					        allowReset
 					    />
-				</Fragment>
+				</>
 				}
-			</Fragment>
+			</>
 		)
 
 		const tweet_hover = (
-			<Fragment>
-				{ iconSkin == "link" && <Fragment>
+			<>
+				{ iconSkin == "link" && <>
 					    <p className="uagb-setting-label">{ __( "Tweet Hover Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: tweetBtnHoverColor }} ></span></span></p>
@@ -775,9 +775,9 @@ class UAGBBlockQuote extends Component {
 					        allowReset
 					    />
 
-					  </Fragment>
+					  </>
 				}
-				{ ( iconSkin !== "link" ) && <Fragment>
+				{ ( iconSkin !== "link" ) && <>
 					<p className="uagb-setting-label">{ __( "Tweet Hover Color" ) }
 						<span className="components-base-control__label">
 							<span className="component-color-indicator" style={{ backgroundColor: tweetBtnHoverColor }} ></span></span></p>
@@ -795,14 +795,14 @@ class UAGBBlockQuote extends Component {
 					        onChange={ ( colorValue ) => setAttributes( { tweetBtnBgHoverColor: colorValue } ) }
 					        allowReset
 					    />
-				</Fragment>
+				</>
 				}
-			</Fragment>
+			</>
 		)
 
 		const spacing_settings =(
 			<PanelBody title={ __( "Spacing" ) } initialOpen={ false }>
-				{ skinStyle === "quotation" && <Fragment>
+				{ skinStyle === "quotation" && <>
 					<h2>{ __( "Quote Icon Margin (px)" ) }</h2>
 					<RangeControl
 						label={ UAGB_Block_Icons.top_margin }
@@ -841,7 +841,7 @@ class UAGBBlockQuote extends Component {
 						allowReset
 					/>
 					<hr className="uagb-editor__separator" />
-				</Fragment>
+				</>
 				}
 				{ skinStyle === "border" &&
 					<RangeControl
@@ -873,7 +873,7 @@ class UAGBBlockQuote extends Component {
 				/>
 				}
 				
-				{ skinStyle === "border"  && <Fragment>
+				{ skinStyle === "border"  && <>
 					<hr className="uagb-editor__separator" />
 					<h2>{ __( "Vertical Padding" ) }</h2>
 					<RangeControl
@@ -885,7 +885,7 @@ class UAGBBlockQuote extends Component {
 						max={ 500 }
 						allowReset
 					/>
-				</Fragment>
+				</>
 				}
 			</PanelBody>
 		)
@@ -897,7 +897,7 @@ class UAGBBlockQuote extends Component {
 					checked={ enableTweet }
 					onChange={ ( value ) => setAttributes( { enableTweet: ! enableTweet } ) }
 				/>
-				{ enableTweet && <Fragment>
+				{ enableTweet && <>
 					<SelectControl
 						label={ __( "Icon View" ) }
 						value={ iconView }
@@ -918,8 +918,8 @@ class UAGBBlockQuote extends Component {
 							{ value: "link", label: __( "Link" ) },
 						] }
 					/>
-				</Fragment>}
-				{ enableTweet && iconView !== "icon" && <Fragment>
+				</>}
+				{ enableTweet && iconView !== "icon" && <>
 					<hr className="uagb-editor__separator" />
 					<TextControl
 						label= { __( "Label" ) }
@@ -927,10 +927,10 @@ class UAGBBlockQuote extends Component {
 						onChange={ value => setAttributes( { iconLabel: value } ) }
 					/>
 
-				</Fragment>
+				</>
 				}
 				
-				{ enableTweet && <Fragment>
+				{ enableTweet && <>
 					<TypographyControl
 						label={ __( "Typography" ) }
 						attributes = { attributes }
@@ -963,9 +963,9 @@ class UAGBBlockQuote extends Component {
 						onChange={ value => setAttributes( { customUrl: value } ) }
 					/>
 					}
-				</Fragment>
+				</>
 				}
-				{ enableTweet && iconSkin !== "link" && <Fragment>
+				{ enableTweet && iconSkin !== "link" && <>
 					<hr className="uagb-editor__separator" />
 					<h2>{ __( "Button Padding (px)" ) }</h2> 
 					<RangeControl
@@ -988,9 +988,9 @@ class UAGBBlockQuote extends Component {
 						allowReset
 						initialPosition={5}
 					/>														
-				</Fragment>
+				</>
 				}
-				{ (enableTweet && iconView == "icon_text") && <Fragment>
+				{ (enableTweet && iconView == "icon_text") && <>
 					<hr className="uagb-editor__separator" />
 					<RangeControl
 						label={ __( "Space between Tweet Icon and Text" ) }
@@ -1001,9 +1001,9 @@ class UAGBBlockQuote extends Component {
 						allowReset
 						initialPosition={5}
 					/>
-				</Fragment>
+				</>
 				}
-				{ enableTweet && <Fragment>
+				{ enableTweet && <>
 					<hr className="uagb-editor__separator" />
 					<TabPanel className="uagb-inspect-tabs uagb-inspect-tabs-col-2"
 						activeClass="active-tab"
@@ -1031,20 +1031,20 @@ class UAGBBlockQuote extends Component {
 							}
 						}
 					</TabPanel>
-				</Fragment>
+				</>
 				}
 			</PanelBody>
 		)
 
 		return (
-			<Fragment>
+			<>
 				<BlockControls key='controls'>
 					{  ( skinStyle !== "border" )  && <AlignmentToolbar
 						value={ align }
 						onChange={ ( value ) => setAttributes( { align: value } ) }
 					/>
 					}
-					{ skinStyle === "quotation" && <Fragment>
+					{ skinStyle === "quotation" && <>
 						<Toolbar>
 							<Tooltip text={ __( "Normal Quote" ) }>
 								<Button
@@ -1074,11 +1074,11 @@ class UAGBBlockQuote extends Component {
 								</Button>
 							</Tooltip>
 						</Toolbar>
-					</Fragment>
+					</>
 					}
 
 					{ enableTweet &&
-						<Fragment>
+						<>
 							<Toolbar>
 								<label
 									aria-label={ __( "Twitter Username" ) }
@@ -1096,7 +1096,7 @@ class UAGBBlockQuote extends Component {
 									value={ iconShareVia }
 								/>
 							</Toolbar>
-						</Fragment>
+						</>
 					}
 
 				</BlockControls>
@@ -1147,7 +1147,7 @@ class UAGBBlockQuote extends Component {
 				{ loadDescGoogleFonts }
 				{ loadAuthorGoogleFonts }
 				{ loadTweetGoogleFonts }
-			</Fragment>
+			</>
 		)
 	}
 
