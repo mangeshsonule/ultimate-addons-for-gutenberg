@@ -40,7 +40,7 @@ const {
 
 const { withSelect } = wp.data
 
-const { Component, Fragment } = wp.element
+const { Component } = wp.element
 
 class UAGBAdvancedHeading extends Component {
 
