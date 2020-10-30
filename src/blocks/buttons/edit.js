@@ -16,8 +16,7 @@ import WebfontLoader from "../../components/typography/fontloader"
 const { __ } = wp.i18n
 
 const {
-	Component,
-	Fragment,
+	Component
 } = wp.element
 
 const {
