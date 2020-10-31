@@ -7,7 +7,6 @@ const attributes = {
 		type: "string"
 	},
 	label: {
-		type: 'html',
 		selector: ".uagb-icon-list__label",
 		default: "#Label"
 	},

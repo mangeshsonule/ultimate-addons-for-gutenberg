@@ -61,7 +61,7 @@ const attributes = {
 		default: Array(6).fill(true)
 	},
 	headerLinks: {
-		type: 'html',
+		type: 'string',
 		default: ''
 	},
 	align : {
